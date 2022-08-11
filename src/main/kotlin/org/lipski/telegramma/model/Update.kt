@@ -1,5 +1,7 @@
 package org.lipski.telegramma.model
 
+import org.lipski.telegramma.model.event.*
+
 data class Update(
     val updateId: Int,
     val message: Message?,

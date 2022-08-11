@@ -1,4 +1,4 @@
-package org.lipski.telegramma.model
+package org.lipski.telegramma.model.event
 
 class ChatMemberUpdated {
     // TODO: Implement class 
