@@ -12,13 +12,14 @@ class Bot(url: String, token: String) {
 
     private val restTemplate = RestTemplate();
 
-    private val methodTemplate = String.format(urlTemplate(), url, token)
+    private val methodTemplate = String.format(urlTemplate(), url, token, "%s")
 
     private fun makeUri(method: Method): String {
         return String.format(methodTemplate, method.methodName)
     }
 
-    private fun <T: Any> invokeMethod(method: Method, params: Map<String, Any?>, returnType: Class<T>): T? {
+    // TODO: make private
+    public fun <T: Any> invokeMethod(method: Method, params: Map<String, Any?>, returnType: Class<T>): T? {
         val uriRequest = UriComponentsBuilder.fromUriString(makeUri(method))
         for (param in params) {
             uriRequest.queryParam(param.key, param.value)

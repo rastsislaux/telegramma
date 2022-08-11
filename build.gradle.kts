@@ -17,6 +17,7 @@ repositories {
 
 dependencies {
     implementation("org.springframework:spring-web:5.3.22")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3")
     testImplementation(kotlin("test"))
 }
 
